@@ -1,0 +1,136 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ccc;
+  width: 350px;
+  height: 450px;
+  border-radius: 5px;
+  padding: 20px 5px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.9s;
+  animation-name: slideIn;
+  animation-duration: 0.9s
+}
+
+.modal-content .screen {
+    background: #fff;
+    width: 100%;
+    height: 80px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 95%;
+}
+
+.modal-content .screen p {
+    font-size: 42px;
+    margin: 5px;
+}
+
+.modal-content .keys {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.modal-content .keys .plus {
+  grid-row: 2/4;
+  grid-column: 4/5;
+  background: #db7c46;
+  color: #fff;
+}
+
+.modal-content .keys .plus:active {
+  background: #eee;
+  color: #000;
+}
+
+.modal-content .keys .equal {
+  grid-row: 4/6;
+  grid-column: 4/5;
+}
+
+.modal-content .keys .del {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+
+.modal-content .keys button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 1px;
+  border-radius: 5px;
+  /* background: #db7c46; */
+}
+
+.modal-content .keys button:active {
+  color: #fff;
+  background: #db7c46;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  /* background: #db7c46; */
+  padding: .5rem 10rem;
+  color: #db7c46;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {top: -300px; opacity: 0} 
+  to {top: 50%; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {top: -300px; opacity: 0}
+  to {top: 50%; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Calculator</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="screen"><p id="display"></p></div>
+            <div class="keys">
+                <button value="7">7</button>
+                <button value="8">8</button>
+                <button value="9">9</button>
+                <button value="4">4</button>
+                <button value="5">5</button>
+                <button value="6">6</button>
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button value="0">0</button>
+                <button value=".">.</button>
+                <button value="&plus;" class="plus">+</button>
+                <button class="minus">-</button>
+                <button class="times">&times;</button>
+                <button class="divide">&divide;</button>
+                <button class="del">&leftarrow;</button>
+                <button class="clear">Del</button>
+                <button class="equal">&equals;</button>
+            </div>
+            <span class="close">&times;</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="calculator.js"></script>
+</html>
